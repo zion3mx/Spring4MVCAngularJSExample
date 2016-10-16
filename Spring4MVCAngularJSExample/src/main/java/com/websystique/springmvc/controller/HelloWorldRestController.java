@@ -60,10 +60,12 @@ public class HelloWorldRestController {
  
         if (userService.isUserExist(user)) {
             System.out.println("A User with name " + user.getUsername() + " already exist");
-            return new ResponseEntity<Void>(HttpStatus.CONFLICT);
+          //  return new ResponseEntity<Void>(HttpStatus.CONFLICT);
         }
  
         userService.saveUser(user);
+        
+        for(int i=0;i<100;i++) ;
  
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(ucBuilder.path("/user/{id}").buildAndExpand(user.getId()).toUri());
