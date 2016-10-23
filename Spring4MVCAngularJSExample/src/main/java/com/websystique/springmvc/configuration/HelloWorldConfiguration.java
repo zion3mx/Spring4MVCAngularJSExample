@@ -39,7 +39,7 @@ public class HelloWorldConfiguration extends WebMvcConfigurerAdapter{
 	public DataSource getDataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://testmysql.cnlmaym4pos1.ap-northeast-2.rds.amazonaws.com:3306/nemo");
+		dataSource.setUrl("");
 		dataSource.setUsername("admin");
 		dataSource.setPassword("1q2w3e4r");
 		
